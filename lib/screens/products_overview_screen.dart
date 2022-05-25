@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_udemey/widgets/product_item.dart';
 
-import '../models/product.daart.dart';
+import '../models/product.dart';
 
 class ProductsOverviewScreen extends StatelessWidget {
 
@@ -32,15 +32,14 @@ class ProductsOverviewScreen extends StatelessWidget {
       price: 49.99,
       imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
-    )
-  ];
+    )];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("MyShop"),
-      // ),
+      appBar: AppBar(
+        title: Text("MyShop"),
+      ),
       body: GridView.builder(
         padding: const EdgeInsets.all(10.0),
           itemCount: loadedProduct.length,

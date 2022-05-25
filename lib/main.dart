@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:state_management_udemey/screens/product_detail_screen.dart';
 import 'package:state_management_udemey/screens/products_overview_screen.dart';
-import 'package:state_management_udemey/widgets/product_item.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,19 +17,10 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.deepOrangeAccent,
         fontFamily: 'Lato',
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-class MyHomePage extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("MyShop"),
-      ),
-      body: ProductsOverviewScreen(),
+      home: ProductsOverviewScreen(),
+        routes: {
+        ProductDetailScreen.routeName:(context)=> ProductDetailScreen(),
+        },
     );
   }
 }
