@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class ProductDetailScreen extends StatelessWidget {
 
+  String? id;
   String? title;
   String? imageUrl;
   ProductDetailScreen({this.title,this.imageUrl});
